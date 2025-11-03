@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        table{
+            width: 1000px;
+            border-collapse: collapse;
+        }
+    </style>
+  </head>
+  <body>
+    <center>
+      <table border="1"  >
+        <form action="submit.php" method="post">
+          <tr>
+            <th colspan="4">Registration Form</th>
+          </tr>
+          <tr>
+            <td>Student's Name</td>
+            <td><input type="text" placeholder="First Name" /></td>
+            <td><input type="text" placeholder="Middle Name" /></td>
+            <td><input type="text" placeholder="Last Name" /></td>
+          </tr>
+          <tr>
+            <td>Father's Name</td>
+            <td>
+              <input type="text" placeholder="Enter your father's Name" />
+            </td>
+            <td>Mother's Name</td>
+            <td>
+              <input type="text" placeholder="Enter your Mother's Name " />
+            </td>
+          </tr>
+          <tr>
+            <td>Date of Birth</td>
+            <td><input type="date" placeholder="mm/dd/yyyy" /></td>
+            <td>Gender</td>
+            <td>
+                <label for="male">Male</label>
+              <input type="radio" name="gender" id="male" value="Male" />
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="female" value="Female" />
+              
+            </td>
+          </tr>
+          <tr>
+            <td>Category</td>
+            <td>
+                <label for="gen">Gen</label>
+                <input type="radio" name="category" id="gen" value="Gen">
+                <label for="obc">OBC</label>
+                <input type="radio" name="category" id="obc" value="OBC">
+                <label for="sc/st">SC/ST</label>
+                <input type="radio" name="category" id="sc/st" value="SC/ST">
+
+            </td>
+            <td>Handicapped</td>
+            <td>
+                <label for="yes">Yes</label>
+                <input type="radio" name="handicapped" id="yes" value="Yes">
+                <label for="no">No</label>
+                <input type="radio" name="handicapped" id="no" value="No">
+            </td>
+          </tr>
+          <tr>
+            <td>Ex-Serviceman</td>
+            <td>
+                <label for="yess">Yes</label>
+                <input type="radio" name="service" id="yess" value="Yes">
+                <label for="noo">No</label>
+                <input type="radio" name="service" id="noo" value="No">
+            </td>
+            <td>EWS</td>
+            <td>
+                <label for="yeah">Yes</label>
+                <input type="radio" name="ews" id="yeah" value="Yes">
+                <label for="noah">No</label>
+                <input type="radio" name="ews" id="noah" value="No">
+            </td>
+
+          </tr>
+          <tr>
+            <td>Email ID</td>
+            <td><input type="email"></td>
+            <td>Mobile No.</td>
+            <td><input type="number"></td>
+          </tr>
+          <tr>
+            <td>State</td>
+            <td>
+                <select name="state" id="state">
+                    <option value="select one">Select any One</option>
+                    <option value="mp">mp</option>
+                    <option value="rajasthan">Rajasthan</option>
+                </select>
+            </td>
+            <td>City</td>
+            <td>
+                <select name="city" id="city">
+                    <option value="Select any one">Select any One</option>
+                    <option value="bhopal">Bhopal</option>
+                    <option value="sehore">Sehore</option>
+                </select>
+            </td>
+
+          </tr>
+          <tr>
+            <td>Upload Photo</td>
+            <td>
+                <input type="file" name="uploadPhoto" >
+            </td>
+            <td>Upload Signature</td>
+            <td>
+                <input type="file" name="uploadSign">
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="3" style="text-align: center;">
+                <input type="submit" value="Submit">
+            </td>
+          </tr>
+        </form>
+      </table>
+    </center>
+  </body>
+</html>
