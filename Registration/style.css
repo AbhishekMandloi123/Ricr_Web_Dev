@@ -1,0 +1,68 @@
+body{
+    background-color: oklab(45.202999999999996% -0.03235 -0.31162 / 0.833);
+    
+}
+
+#mainbox{
+    border: 1px solid black;
+    width: 350px;
+    height: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 0px lightblue ;
+    background-color:rgb(255, 255, 255)
+}
+#heading{
+ u{
+    text-decoration-color: blue;
+
+}
+    margin-left: 10px;
+}
+#loginform{
+    width: fit-content;
+    margin: 10px 10px 10px 0px;
+}
+.formfield{
+    margin: 30px 0px 0px 0px;
+    input{
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+   
+   
+    
+}
+#remember
+{
+    size: 1px;
+    margin-top: 15px;
+    
+    
+}
+#forgot
+{
+    margin-left: 20px;
+    color: blue;
+
+}
+#login{
+    border: 10px solid rgba(0, 0, 255, 0.699);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(0, 0, 255, 0.989);
+   
+    margin: 20px 0px 0px 35px;
+     text-align: center;
+    width: 250px;
+}
+#signup{
+    color: blue;
+   
+}
+#lastsection{
+    text-align: center;
+}
