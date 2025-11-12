@@ -1,0 +1,106 @@
+.navbar{
+    height: 40px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.pagelogo{
+    background-image: url();
+}
+.my_image{
+    width: 600px;
+    height: 700px;
+   margin-left: 1300px;
+   margin-top: -450px;
+    border-radius: 20px;
+    
+}
+.herosection{
+    margin-left: 200px;
+    margin-top: 150px;
+    h1{
+        font-size: 60px;
+    }
+    .about_me{
+        font-size:25px ;
+        color:grey;
+        line-height: 38px;
+        
+    }
+    label{
+        font-size: 18px;
+    }
+    input{
+        width: 400px;
+        height: 40px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    span{
+        
+        border: 15px solid black;
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+        margin-left: 15px;
+    }
+    .guidelines{
+        color: gray;
+        font-size: 20px;
+    }
+    
+
+}
+
+.client_logo{
+    
+    text-align: center;
+    .company
+    {
+    width: 140px;
+    margin-top: 50px;
+    margin-right: 25px; 
+}
+
+
+}
+.c1{
+    text-align: center;
+    margin-top: 130px;
+    font-size: 25px;
+}
+.section2{
+    text-align: center;
+    margin-top: 90px;
+    .my_skills{
+        font-size: 22px;
+        font-weight: 50px;
+    }
+    .my_skills1{
+        font-size: 50px;
+    }
+    .my_skills2{
+        font-size: 20px;
+        color: grey;
+    }
+    
+}
+.section3i{
+    display: flex;
+    .icon{
+        margin-left: 200px;
+        
+    }
+    .tech_name{
+        align-items: center;
+        margin-top: 25px;
+    }
+    .tech_details{
+        margin-right: 20px;
+        margin-top: 80px;
+    }
+    
+}

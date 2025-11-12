@@ -1,0 +1,43 @@
+#box{
+    border: 1px solid black;
+    width: 100px;
+    height: 80px;
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    animation: moving 5s linear infinite;
+    
+}
+@keyframes moving 
+{
+    0%{
+        top: 0px;
+        left: 0px;
+        background-color: red;
+        transform: rotate(-1800deg);
+        transition: transform 2s;
+        scale: 110deg;
+    }
+    25%{
+        top: 0px;
+        left: 500px;
+        background-color: yellow;
+    }
+    50%{
+        top: 500px;
+        left: 500px;
+        background-color: green;
+    }
+    75%{
+        top: 500px;
+        left: 0px;
+        background-color: blue;
+    }
+     100%{
+        top: 0px;
+        left: 0px;
+        background-color: red  ;
+    }
+
+    
+}

@@ -1,0 +1,65 @@
+h1 {
+    width: 200px;
+    border: 1px solid black;
+
+
+}
+
+.maindiv {
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+
+    .child {
+        width: 0%;
+        background-color: orange;
+
+
+    }
+}
+
+.maindiv:hover {
+    .child {
+        width: 100%;
+        height: 50px;
+        background-color: green;
+        transition: width 5s linear, background-color 5s linear;
+    }
+}
+
+#outer1 {
+    width: 500px;
+    height: 50px;
+    border: 1px solid black;
+
+    #inner1 {
+        height: 50px;
+    }
+
+}
+
+#outer1:hover {
+    #inner1 {
+        animation: myAnnimation 5s linear;
+    }
+}
+
+@keyframes myAnnimation {
+    0% {
+        width: 0%;
+        background-color: red;
+    }
+
+    50% {
+        width: 50%;
+        background-color: green;
+    }
+
+    100% {
+        width: 100%;
+        background-color: yellow;
+    }
+
+
+
+}
