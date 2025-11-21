@@ -7,182 +7,210 @@
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
     />
+    <style>
+      
+      .form-section {
+        border-radius: 20px;
+        padding: 50px;
+        max-width: 900px;
+        margin: auto;
+      }
+      .form-control,
+      .form-select {
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: 1px solid #b9c8d3;
+      }
+      label {
+        font-weight: 600;
+      }
+      .submit-btn {
+        background-color: #0d1b2a;
+        color: white;
+        padding: 12px 40px;
+        border-radius: 40px;
+        font-size: 18px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div class="form-section my-5 shadow bg-primary bg-opacity-10">
+      <h1 class="text-center fw-bold">Enquiry Form</h1>
+      <p class="text-center mb-4">
+        Have questions or need assistance? Fill out the form below to connect
+        with our team and explore your opportunities.
+      </p>
+
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Person Name*</label>
+            <input
+              id="EnqName"
+              type="text"
+              class="form-control"
+              placeholder="Person Name"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Contact Number*</label>
+            <input
+              id="EnqContact"
+              type="number"
+              class="form-control"
+              placeholder="Contact Number"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Email*</label>
+            <input
+              id="EnqEmail"
+              type="email"
+              class="form-control"
+              placeholder="Email"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Qualification*</label>
+            <input
+              id="EnqQualification"
+              type="text"
+              class="form-control"
+              placeholder="Qualification"
+            />
+          </div>
+        </div>
+
+        <!-- College -->
+        <div class="mb-3">
+          <label class="form-label">College/School Name*</label>
+          <input
+            id="EnqCollege"
+            type="text"
+            class="form-control"
+            placeholder="College/School Name"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Year*</label>
+            <select id="EnqYear" class="form-select">
+              <option disabled selected>Year</option>
+              <option>1st Year</option>
+              <option>2nd Year</option>
+              <option>3rd Year</option>
+              <option>4th Year</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Branch*</label>
+            <input
+              id="EnqBranch"
+              type="text"
+              class="form-control"
+              placeholder="Branch"
+            />
+          </div>
+        </div>
+
+        <!-- Courses -->
+        <div class="mb-3">
+          <label class="form-label">Interested in Which Course*</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label"
+              >Full Stack Web Development - Placement Oriented</label
+            >
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label"
+              >Data Science with Python - Placement Oriented</label
+            >
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label"
+              >Data Analytics with Python - Placement Oriented</label
+            >
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Business Analyst</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Java Programming</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Python Programming</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">C/C++ Programming</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Other</label>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label class="form-label">
+              Source of Information*<br />
+              <small
+                >(Only choose 'Received call from institute' if you actually got
+                a call from us)</small
+              >
+            </label>
+            <select id="EnqSource" class="form-select">
+              <option disabled selected>Source of Information*</option>
+              <option>Social Media</option>
+              <option>Friend</option>
+              <option>College Workshop</option>
+              <option>Received call from institute</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label"
+              >Name of Executive* <br /><small
+                >(Write or Choose The Name of the Executive From the Option
+                Below)</small
+              ></label
+            >
+            <select id="EnqExecutive" class="form-select">
+              <option disabled selected>Name of Executive</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <button type="button" class="submit-btn" onclick="enquirySubmit()">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-  </head>
-  <body class="bg-light py-4">
-    <div class="container" style="max-width: 950px">
-      <div class="p-4 bg-primary bg-opacity-10 rounded shadow-sm">
-        <h3 class="fw-bold text-center">Enquiry Form</h3>
-        <p class="text-center mb-4">
-          Have questions or need assistance? Fill the form below to connect with
-          our team and explore your opportunities.
-        </p>
 
-        <form>
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label class="form-label">Person Name*</label>
-              <input
-                id="personName"
-                type="text"
-                class="form-control"
-                placeholder="Person Name"
-              />
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Contact Number*</label>
-              <input
-                id="contactNumber"
-                type="number"
-                class="form-control"
-                placeholder="Contact Number"
-              />
-            </div>
-          </div>
-
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label class="form-label">Email*</label>
-              <input
-                type="email"
-                id="email"
-                class="form-control"
-                placeholder="Email"
-              />
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Qualification*</label>
-              <input
-                id="qualification"
-                type="text"
-                class="form-control"
-                placeholder="Qualification"
-              />
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">College/School Name*</label>
-            <input
-              id="collegeName"
-              type="text"
-              class="form-control"
-              placeholder="College/School Name"
-            />
-          </div>
-
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label class="form-label">Year*</label>
-              <select class="form-select" id="year">
-                <option selected disabled>Year</option>
-                <option>First Year</option>
-                <option>Second Year</option>
-                <option>Third Year</option>
-                <option>Fourth Year</option>
-                <option>Passout</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <div class="col-md-6">
-              <label class="form-label">Branch*</label>
-              <input
-                type="text"
-                id="branch"
-                class="form-control"
-                placeholder="Branch"
-              />
-            </div>
-          </div>
-
-          <div class="row mb-3">
-            <div class="col-md-6 " id="Course">
-              <label class="form-label">Interested in Which Course*</label
-              ><br />
-
-              <div class="form-check">
-                <input class="form-check-input" id="1" type="checkbox" />
-                <label class="form-check-label"
-                  >Full Stack Web Development - Placement Oriented</label
-                >
-              </div>
-
-              <div class="form-check">
-                <input class="form-check-input" id="2" type="checkbox" />
-                <label class="form-check-label"
-                  >Data Science with Python - Placement Oriented</label
-                >
-              </div>
-
-              <div class="form-check">
-                <input class="form-check-input" id="3" type="checkbox" />
-                <label class="form-check-label"
-                  >Data Analytics with Python - Placement Oriented</label
-                >
-              </div>
-
-              <div class="form-check">
-                <input class="form-check-input" id="4" type="checkbox" />
-                <label class="form-check-label">Business Analyst</label>
-              </div>
-
-              <div class="form-check">
-                <input class="form-check-input" id="5" type="checkbox" />
-                <label class="form-check-label">Java Programming</label>
-              </div>
-
-              <div class="form-check">
-                <input class="form-check-input" id="6" type="checkbox" />
-                <label class="form-check-label">Python Programming</label>
-              </div>
-
-              <div class="form-check">
-                <input class="form-check-input" id="7" type="checkbox" />
-                <label class="form-check-label">C/C++ Programming</label>
-              </div>
-
-              <div class="form-check">
-                <input class="form-check-input" id="8" type="checkbox" />
-                <label class="form-check-label">Other</label>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <label class="form-label">Source of Information*</label>
-              <select class="form-select mb-3" id="sourceOfInfo">
-                <option selected disabled>Source of Information</option>
-                <option>Newspaper/Print Media</option>
-                <option>Friends/Relatives</option>
-                <option>Social Media</option>
-                <option>Workshop/Seminar</option>
-                <option>Received call from Institute</option>
-                <option>Other</option>
-              </select>
-
-              <label class="form-label">Name of Executive</label>
-              <select class="form-select">
-                <option selected disabled>Name of Executive</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="text-center">
-            <button
-              class="btn btn-primary px-4"
-              id="submit"
-              onclick="Submitnow()"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+    <script src="script.js"></script>
   </body>
 </html>
+
