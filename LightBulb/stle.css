@@ -1,0 +1,73 @@
+#bulb {
+  padding: 50px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: fit-content;
+}
+
+button {
+  margin: 10px;
+}
+
+#smartBulb {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.on {
+  background-color: yellow;
+}
+
+#rainbowBULB{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 50%;  
+}
+
+.color{
+height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 50%; 
+  cursor: default;
+}
+
+#c1{
+    background-color: violet;
+}
+
+#c2{
+    background-color: indigo;
+}
+
+#c3{
+    background-color: blue;
+}
+
+#c4{
+    background-color: green;
+}
+
+#c5{
+    background-color: yellow;
+}
+
+#c6{
+    background-color: orange;
+}
+
+#c7{
+    background-color: red;
+}

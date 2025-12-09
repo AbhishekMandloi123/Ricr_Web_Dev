@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shopping Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#Contacts">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home">
+        <h1>Welcome To Shopping Cart</h1>
+        <p>Shop Products For your Good Ones</p>
+        <a href="#Products" class="btn btn-light border-light">Get Started</a>
+
+    </section>
+
+
+    <section id="About">
+        <h4>
+            We Provide best Choices For you.
+            We are the worlds most used Shopping Platform. 
+            
+        </h4>
+
+    </section>
+
+    <section id="Products">
+        <h1 class="section-title">Our Products</h1>
+        <div class="course-container">
+            <div class="course-card">
+                <h3> Hoodies</h3>
+                <p>Zara</p>
+                <p>Price : 550</p>
+                <p>This is a whilte oversized hoodie</p>
+                <a class="btn btn-primary" onclick="buyProduct()" id="hoodie">Buy Now</a>
+
+
+            </div>
+            <div class="course-card">
+                <h3>Trimmer</h3>
+                <p>Moonlight</p>
+                <p>Price:1500</p>
+                <p>This is a Trimmer with six sizes.</p>
+                <a class="btn btn-primary" onclick="buyProduct()" id="trimmer">Buy Now</a>
+
+            </div>
+            <div class="course-card">
+                <h3>Shoes</h3>
+                <p>Nike</p>
+                <p>Price:2000</p>
+                <p>These are new white sneakers</p>
+                <a class="btn btn-primary" onclick="buyProduct()" id="shoes">Buy Now</a>
+
+            </div>
+        </div>
+
+    </section>
+    <section id="Contacts">
+        <h2 class="section-title">Contact Us</h2>
+        <form id="contactForm">
+        <input type="text" id="cname" placeholder="Your Name" required />
+        <input type="email" id="cemail" placeholder="Your Email" required />
+        <textarea id="cmessage" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-light " onclick="Submit()">Submit</button>
+      </form>
+
+    </section>
+
+    <section id="enroll">
+      <h2 class="section-title">Product Enrollment Form</h2>
+      <form id="enrollForm">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="text" id="address" placeholder="Address" required />
+        <input type="tel" id="phone" placeholder="Phone Number" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <select id="payment" required>
+          <option value="" disabled selected>Select Payment Mode</option>
+          <option>Online</option>
+          <option>Cash On-Delivery</option>
+        </select>
+        <input type="number" id="quantity" placeholder="Product Quantity" required>
+
+        <button type="submit" class="btn btn-light " onclick="Submits()">Submit</button>
+        
+      </form>
+    </section>
+
+
+
+
+  </body>
+  <script src="script.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+</html>

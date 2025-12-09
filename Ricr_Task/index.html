@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="bg-primary text-center text-white">
+      <h1>Dice Game</h1>
+    </div>
+    <div class="d-flex p-5 ">
+<div class="container border p-3 border-dark w-25 mx-auto shadow-lg rounded-2">
+    <div class="text-center">
+<h3>Player 1</h3>
+      <img class="m-1 p-1 w-25 "
+      id="p1dice"
+        src="https://th.bing.com/th?q=Dice+Cartoon+Png&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.4&pid=InlineBlock&rm=3&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247"
+        alt=""
+      /> 
+      <div class="pt-3">
+<button class="btn btn-primary " disabled onclick="p1Play()" id="rolldice1">Roll Dice</button>
+      </div>
+    </div>
+        
+      
+      
+    </div>
+    <div class="container border p-2 border-dark w-25 mx-auto shadow-lg rounded-2" >
+    <div class="text-center">
+<h3>Player 2</h3>
+      <img class="m-1 p-1 w-25"
+        src="https://th.bing.com/th?q=Dice+Cartoon+Png&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.4&pid=InlineBlock&rm=3&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247"
+        alt=""
+      />
+      <div class="pt-3">
+<button class="btn btn-primary "  onclick="p2Play()" id="rolldice2">Roll Dice</button>
+      </div>
+    </div>
+        
+      
+      
+    </div>
+    
+    </div>
+    <div class="container text-center">
+            <div class="text-center pt-5">
+                <h3>Score Board</h3>
+                <div class="d-flex justify-content-evenly">
+                <div class="text-center">
+                    <h5 >Player 1</h5>
+                    <br>
+                    <label id="pls1">0</label>
+                    
+                </div>
+                <div>
+                    <h5>Player 2</h5>
+                    <br>
+                    <label id="pls2">0</label>
+                </div>
+
+            </div>
+            <div class="d-flex justify-content-center gap-4">
+                <div>
+                    <button class="btn btn-success" onclick="start()" id="start">Start Game</button>
+                </div>
+                 <div>
+                    <button class="btn btn-danger" disabled onclick="Restart()" id="restart">Restart Game</button>
+                </div>
+            </div>
+            </div>
+            
+
+        </div>
+        <script src="script.js"></script>
+    
+  </body>
+</html>
