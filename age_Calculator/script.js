@@ -27,5 +27,5 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
     age--;
   }
 
-  resultDiv.innerHTML = <div class="alert alert-success"><h4>Your age is ${age} years.</h4></div>;
+  resultDiv.innerHTML = `<div class="alert alert-success"><h4>Your age is ${age} years.</h4></div>`;
 });
