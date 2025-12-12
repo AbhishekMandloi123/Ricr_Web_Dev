@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
+  <body>
+    <div class="bg-primary text-white">
+        <h1 class="text-center"> Form Validation</h1>
+    </div>
+    <div class=" p-3 text-white gap-between">
+        <div >
+            <label for="fullname">FullName</label>
+            <input type="text" placeholder="Full Name" class="form-control" id="fullname">
+        </div>
+        <span class="text-danger float-end">
+error
+        </span>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" placeholder="email" class="form-control" id="email">
+        </div>
+        <div>
+            <label for="phone">Phone Number</label>
+            <input type="number" placeholder="Phone Number" class="form-control" id="phone">
+        </div>
+        <div>
+            <label f or="Dateofbirth">DOB</label>
+            <input type="date" placeholder="DOB" class="form-control" id="dob">
+        </div>
+        
+    </div>
+    <div class="btn btn-primary form-control">
+        
+        <button type="submit" class="btn btn-primary form-control"  onclick="Submit()">Submit</button>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
