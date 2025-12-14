@@ -10,13 +10,13 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
                 return;
             }
             
-            // Calculate tip amount
+            
             var tipAmount = (billAmount * serviceQuality) / 100;
             
-            // Calculate total amount with tip
+           
             var totalAmount = Number(billAmount) + Number(tipAmount);
             
-            // Calculate amount per person
+           
             var amountPerPerson = totalAmount / numPeople;
             
            
