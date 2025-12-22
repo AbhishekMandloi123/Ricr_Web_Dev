@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Salary Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white text-center">
+          <h4> Salary Calculator</h4>
+        </div>
+
+        <div class="card-body">
+          <label class="form-label">Basic Salary (₹)</label>
+          <input type="number" id="basicSalary" class="form-control" placeholder="Enter basic salary">
+
+          <small id="error" class="text-danger d-none"></small>
+
+          <button id="calcBtn" class="btn btn-success w-100 mt-3" onclick="handleCalculate()">
+            <span id="btnText">Calculate Gross Salary</span>
+            <span id="spinner" class="spinner-border spinner-border-sm d-none"></span>
+          </button>
+
+          <button class="btn btn-secondary w-100 mt-2" onclick="resetAll()">Clear / Reset</button>
+        </div>
+      </div>
+
+      <div id="resultCard" class="card mt-4 shadow d-none">
+        <div class="card-body">
+          <div class="alert alert-success">Salary calculated successfully </div>
+
+          <p>Basic Salary: <strong id="resBasic"></strong></p>
+          <p>HRA (20%): <strong id="resHra"></strong></p>
+          <p>DA (40%): <strong id="resDa"></strong></p>
+          <hr>
+          <p class="fs-5 text-success">
+            Gross Salary: <strong id="resGross"></strong>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
