@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shopping Kart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <h2 class="logo">ShoppingKart</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="home" class="hero">
+      <h1>Welcome to Shopping Kart</h1>
+      <p>Your one-stop shop for everything!</p>
+      <a href="#products" class="btn">Start Shopping</a>
+    </section>
+
+
+    <section id="about" class="section">
+      <h2>About Us</h2>
+      <p>
+        We provide quality products at affordable prices with fast delivery.
+      </p>
+    </section>
+
+    
+    <section id="products" class="section">
+      <h2>Our Products</h2>
+
+      <div class="product-container">
+        <div class="product-card">
+          <img
+            src="https://www.sony.ca/image/bcef63d32b0270480b5371fb35cd3029?fmt=png-alpha&wid=660&hei=660"
+            alt="Product"
+          />
+          <h3>Wireless Headphones</h3>
+          <p>Brand: Sony</p>
+          <p>₹2,999</p>
+          <p>High quality sound and noise cancellation.</p>
+          <a href="#checkout" onclick="buyProduct('Wireless Headphones',2999)"
+            >Buy Now</a
+          >
+        </div>
+
+        <div class="product-card">
+          <img
+            src="data:image/webp;base64,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"
+            alt="Product"
+          />
+          <h3>Smart Watch</h3>
+          <p>Brand: Boat</p>
+          <p>₹1,999</p>
+          <p>Track fitness and notifications easily.</p>
+          <a href="#checkout" onclick="buyProduct('Smart Watch',1999)"
+            >Buy Now</a
+          >
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="checkout" class="section">
+      <h2>Checkout</h2>
+      <form onsubmit="submitOrder(event)">
+        <input type="text" id="cname" placeholder="Name" required />
+        <input type="text" id="address" placeholder="Address" required />
+        <input type="tel" id="phone" placeholder="Phone Number" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <select id="payment">
+          <option>UPI</option>
+          <option>Card</option>
+          <option>Cash on Delivery</option>
+        </select>
+        <input type="number" id="qty" placeholder="Quantity" min="1" required />
+        <button type="submit" class="btn">Place Order</button>
+      </form>
+    </section>
+
+    
+    <section id="contact" class="section">
+      <h2>Contact Us</h2>
+      <form onsubmit="submitContact(event)">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="mail" placeholder="Email" required />
+        <textarea
+          id="message"
+          placeholder="Message (min 10 characters)"
+          required
+        ></textarea>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
