@@ -1,0 +1,38 @@
+import dotenv from "dotenv";
+dotenv.config();
+
+import express from "express";
+import cors from "cors";
+import connectDB from "./src/config/db.js";
+import AuthRouter from "./src/routers/authRouter.js";
+import PublicRouter from "./src/routers/publicRouter.js";
+
+import morgan from "morgan";
+
+const app = express();
+app.use(cors({origin:"http://localhost:5173"}));
+app.use(express.json());
+
+app.use(morgan("dev"));
+
+app.use("/auth", AuthRouter);
+app.use("/public", PublicRouter);
+app.get("/", (req, res) => {
+  console.log("Server is working");
+});
+
+app.use((err, req, res, next) => {
+  const ErrorMessage = err.message || "Internal Server Errror";
+  const StatusCode = err.StatusCode || 500;
+  console.log("Error Found",{ErrorMessage,StatusCode});
+  
+
+  res.status(StatusCode).json({ message: ErrorMessage });
+});
+
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log("Server Starting Port:", port);
+
+  connectDB();
+});
