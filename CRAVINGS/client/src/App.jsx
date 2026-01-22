@@ -1,9 +1,10 @@
 import React from "react";
 import Header from './components/header';
-import Home from "./pages/Home";
+import Home from "./pages/home";
 import About from "./pages/About";
 import Login from "./pages/login";
 import Register from "./pages/register";
+import UserDashboard from "./pages/dashboards/UserDashboard";
 
 import { BrowserRouter, Routes,Route } from "react-router-dom"; 
 import Contact from "./pages/Contact";
@@ -21,6 +22,7 @@ const App = () => {
       <Route path="/contact" element={<Contact/>} />
       <Route path="/login" element={<Login/>} />
       <Route path="/register" element={<Register/>} />
+      <Route path="/dashboard" element={<UserDashboard/>} />
       </Routes>
     </BrowserRouter>
     </>
