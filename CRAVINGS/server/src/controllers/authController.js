@@ -84,3 +84,40 @@ export const UserLogout = async (req, res, next) => {
     next(error);
   }
 };
+
+export const UpdateProfile = async (req, res, next) => {
+  try {
+    const userId = req.user?.id || req.userId;
+    if (!userId) {
+      const error = new Error("User not authenticated");
+      error.statusCode = 401;
+      return next(error);
+    }
+
+    const { firstName, lastName, email, phone, address, city, state, zipCode } = req.body;
+
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      {
+        fullName: `${firstName} ${lastName}`,
+        email,
+        mobileNumber: phone,
+        address,
+        city,
+        state,
+        zipCode,
+      },
+      { new: true }
+    );
+
+    if (!updatedUser) {
+      const error = new Error("User not found");
+      error.statusCode = 404;
+      return next(error);
+    }
+
+    res.status(200).json({ message: "Profile updated successfully", data: updatedUser });
+  } catch (error) {
+    next(error);
+  }
+};

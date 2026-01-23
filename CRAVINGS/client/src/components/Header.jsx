@@ -10,7 +10,11 @@ const Header = () => {
     <>
       <div className="bg-(--color-primary) px-4 py-2 flex justify-between items-center">
         <Link to={"/"}>
-          <img src={Transparent} alt="" className="h-12 w-10 object-cover animate-bounce" />
+          <img
+            src={Transparent}
+            alt=""
+            className="h-12 w-10 object-cover animate-bounce"
+          />
         </Link>
 
         <div className="flex gap-4">
@@ -35,23 +39,29 @@ const Header = () => {
         </div>
 
         <div className="flex gap-3">
-          {isLogin ? <span>{user.fullname}</span> : (<div><button
-            onClick={() => navigate("/login")}
-            className="bg-(--color-secondary) py-2 px-4 rounded-2xl font-bold hover:bg-(--color-accent)"
-          >
-            Login
-          </button>
-          <button
-            onClick={() => navigate("/register")}
-            className="bg-(--color-secondary) py-2 px-4 rounded-2xl font-bold hover:bg-(--color-accent)"
-          >
-            Register
-          </button></div>)
-}
-      </div>
+          {isLogin ? (
+            <div className="text-white-500" onClick={()=>navigate("/dashboard")}>{user.fullName}</div>
+          ) : (
+            <>
+              <div>
+                <button
+                  onClick={() => navigate("/login")}
+                  className="bg-(--color-secondary) py-2 px-4 rounded-2xl font-bold hover:bg-(--color-accent)"
+                >
+                  Login
+                </button>
+                <button
+                  onClick={() => navigate("/register")}
+                  className="bg-(--color-secondary) py-2 px-4 rounded-2xl font-bold hover:bg-(--color-accent)"
+                >
+                  Register
+                </button>
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </>
-
   );
 };
 
