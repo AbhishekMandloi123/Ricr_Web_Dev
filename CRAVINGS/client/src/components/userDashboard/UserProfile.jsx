@@ -1,105 +1,50 @@
-// import React, { useState } from "react";
-// import { useAuth } from "../../context/AuthContext";
-// import EditProfileModal from "./modals/EditProfileModal";
-// const UserProfile = () => {
-//   const { EditProfileModal,setIsEditProfileModalOpen} = useState(false);
-//   const { user } = useAuth();
-//   return (
-//     <>
-//       <div>
-//         <div className="flex gap-10">
-//           <span>Name: </span>
-//           <span>{user.fullName}</span>
-//           <span>Email: </span>
-//           <span>{user.email}</span>
-//           <span>Phone: </span>
-//           <span>{user.mobileNumber}</span>
-
-//         <button
-//           className="border px-5 py-3 bg-amber-400"
-//           onClick={() => setIsEditProfileModalOpen(true)}
-//         >
-//           Edit Profile
-//         </button>
-//       </div>
-//       </div>
-//       {EditProfileModal && (<EditProfileModal onClose={() => setIsEditProfileModalOpen(false)} />)}
-//     </>
-//   );
-// };
-
-// export default UserProfile;
 import React, { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import EditProfileModal from "./modals/EditProfileModal";
 
 const UserProfile = () => {
   const [isEditProfileModalOpen, setIsEditProfileModalOpen] = useState(false);
-  const { user, setUser } = useAuth(); // 👈 IMPORTANT
+  const { user } = useAuth();
 
   return (
     <>
-      <div className="w-full p-6">
-        {/* Profile Card */}
-        <div className="bg-white rounded-2xl shadow-md border border-gray-200 p-8 max-w-5xl">
-          {/* Header */}
-          <div className="flex justify-between items-center border-b pb-4 mb-6">
-            <div>
-              <h2 className="text-2xl font-semibold text-gray-800">
-                User Profile
-              </h2>
-              <p className="text-sm text-gray-500">
-                Manage your personal information
-              </p>
-            </div>
+      <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-2xl font-bold text-gray-800">My Profile</h2>
+          <button
+            className="px-6 py-2 bg-amber-400 hover:bg-amber-500 text-gray-900 font-semibold rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-sm"
+            onClick={() => setIsEditProfileModalOpen(true)}
+          >
+            Edit Profile
+          </button>
+        </div>
 
-            <button
-              className="bg-amber-400 hover:bg-amber-500 text-black font-medium px-6 py-2 rounded-lg shadow-sm transition"
-              onClick={() => setIsEditProfileModalOpen(true)}
-            >
-              Edit Profile
-            </button>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-t pt-6">
+          <div className="flex flex-col">
+            <label className="text-sm font-semibold text-gray-600 mb-2 uppercase tracking-wide">
+              Full Name
+            </label>
+            <span className="text-lg text-gray-800 font-medium">{user.fullName}</span>
           </div>
 
-          {/* Info Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-50 border rounded-xl p-5">
-              <p className="text-xs text-gray-500 uppercase tracking-wide">
-                Full Name
-              </p>
-              <p className="text-lg font-medium text-gray-800 mt-1">
-                {user?.fullName}
-              </p>
-            </div>
+          <div className="flex flex-col">
+            <label className="text-sm font-semibold text-gray-600 mb-2 uppercase tracking-wide">
+              Email
+            </label>
+            <span className="text-lg text-gray-800 font-medium break-all">{user.email}</span>
+          </div>
 
-            <div className="bg-gray-50 border rounded-xl p-5">
-              <p className="text-xs text-gray-500 uppercase tracking-wide">
-                Email Address
-              </p>
-              <p className="text-lg font-medium text-gray-800 mt-1">
-                {user?.email}
-              </p>
-            </div>
-
-            <div className="bg-gray-50 border rounded-xl p-5">
-              <p className="text-xs text-gray-500 uppercase tracking-wide">
-                Mobile Number
-              </p>
-              <p className="text-lg font-medium text-gray-800 mt-1">
-                {user?.mobileNumber}
-              </p>
-            </div>
+          <div className="flex flex-col">
+            <label className="text-sm font-semibold text-gray-600 mb-2 uppercase tracking-wide">
+              Phone Number
+            </label>
+            <span className="text-lg text-gray-800 font-medium">{user.mobileNumber}</span>
           </div>
         </div>
       </div>
 
-      {/* ✅ MODAL */}
       {isEditProfileModalOpen && (
-        <EditProfileModal
-          user={user}
-          onClose={() => setIsEditProfileModalOpen(false)}
-          onUpdate={setUser}
-        />
+        <EditProfileModal onClose={() => setIsEditProfileModalOpen(false)} />
       )}
     </>
   );

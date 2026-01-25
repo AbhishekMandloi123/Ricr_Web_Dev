@@ -1,27 +1,46 @@
+import User from "../models/userModel.js";
+
 export const UserUpdate = async (req, res, next) => {
   try {
-    const { fullName, email, mobileNumber } = req.body;
+    //logic here
 
-    const currentUser = req.User;
-    if (!fullName || !mobileNumber) {
-      const error = new Error("Unauthorized user Please LOgin Again");
-      error.statusCode = 401;
+    const { fullName, email, mobileNumber } = req.body;
+    const currentUser = req.user;
+
+    if (!fullName || !email || !mobileNumber) {
+      const error = new Error("All Feilds Required");
+      error.statusCode = 400;
       return next(error);
     }
-    console.log(currentUser);
 
-    currentUser.fullName = fullName;
-    currentUser.email = email;
-    currentUser.mobileNumber = mobileNumber;
-    await currentUser.save();
+    console.log("OldData: ", currentUser); //old user data in JSON format
+    //first Way
+    // currentUser.fullName = fullName;
+    // currentUser.email = email;
+    // currentUser.mobileNumber = mobileNumber;
+    // await currentUser.save();
 
+    // console.log("NewData:", currentUser);
+
+    //Second Way
+
+    const updatedUser = await User.findByIdAndUpdate(
+      { _id: currentUser._id },
+      {
+        fullName,
+        email,
+        mobileNumber,
+      },
+      { new: true },
+    );
+
+    console.log("Updated User: ", updatedUser);
     res
       .status(200)
-      .json({ message: "Profile Updated Successfully", data: currentUser });
+      .json({ message: "User Updated Sucessfully", data: updatedUser });
+
+    console.log("Updating the user");
   } catch (error) {
-    console.log(error);
-  }
-  finally {
     next(error);
   }
 };
