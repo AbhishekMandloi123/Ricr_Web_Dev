@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Register from "./pages/register";
-import Login from "./pages/Login";
+import Login from "./pages/login";
 import { Toaster } from "react-hot-toast";
 import UserDashboard from "./pages/dashboards/UserDashboard";
 import RiderDashboard from "./pages/dashboards/RiderDashboard";

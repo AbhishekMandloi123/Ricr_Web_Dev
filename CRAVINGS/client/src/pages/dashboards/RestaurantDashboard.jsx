@@ -1,11 +1,7 @@
-import React from 'react'
-
+import React from "react";
+import UserProfile from "../../components/userDashboard/UserProfile";
 const RestaurantDashboard = () => {
-  return (
-    <div>
-      Restaurant
-    </div>
-  )
-}
+  return <div>Restaurant</div>;
+};
 
-export default RestaurantDashboard
+export default RestaurantDashboard;
