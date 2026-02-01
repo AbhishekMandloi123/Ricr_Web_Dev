@@ -8,6 +8,22 @@ const EditProfileModal = ({ onClose }) => {
     fullName: user.fullName,
     email: user.email,
     mobileNumber: user.mobileNumber,
+    gender:user.gender,
+    dob:user.dob,
+    address:user.address,
+    city:user.city,
+    pin:user.pin,
+    documents:{
+      uidai:"N/A",
+      pan:"N/A"
+
+      
+    },
+    geoLocation:{
+      Lat:"N/A",
+      Lon:"N/A"
+    },
+
   });
 
   const handleSubmit = async (e) => {

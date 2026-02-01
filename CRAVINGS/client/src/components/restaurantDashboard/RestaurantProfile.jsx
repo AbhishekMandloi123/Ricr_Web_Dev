@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
-import EditProfileModal from "./modals/EditProfileModal";
+import EditRestaurantModal from "./modals/EditRestaurantModal";
 import UserImage from "../../assets/userImage.jpg";
 import { FaCamera } from "react-icons/fa";
 import api from "../../config/Api";
 import toast from "react-hot-toast";
-import ResetPasswordModal from "./modals/ResetPasswordModal";
+import ResetRestaurantProfile from "./modals/ResetRestaurantProfile";
 
-const UserProfile = () => {
+const RestaurantProfile = () => {
   const { user, setUser } = useAuth();
   //console.log(user);
 
-  const [isEditProfileModalOpen, setIsEditProfileModalOpen] = useState(false);
-  const [isResetPasswordModalOpen, setIsResetPasswordModalOpen] =
+  const [isEditRestaurantProfileModalOpen, setIsEditRestaurantProfileModalOpen] = useState(false);
+  const [isResetRestaurantPasswordModalOpen, setIsResetRestaurantPasswordModalOpen] =
     useState(false);
   const [preview, setPreview] = useState("");
 
@@ -90,13 +90,13 @@ const UserProfile = () => {
           <div className="flex flex-col gap-2">
             <button
               className="px-4 py-2 rounded bg-(--color-secondary) text-white"
-              onClick={() => setIsEditProfileModalOpen(true)}
+              onClick={() => setIsEditRestaurantProfileModalOpen(true)}
             >
               Edit
             </button>
             <button
               className="px-4 py-2 rounded bg-(--color-secondary) text-white"
-              onClick={() => setIsResetPasswordModalOpen(true)}
+              onClick={() => setIsResetRestaurantPasswordModalOpen(true)}
             >
               Reset password
             </button>
@@ -104,17 +104,17 @@ const UserProfile = () => {
         </div>
       </div>
 
-      {isEditProfileModalOpen && (
-        <EditProfileModal onClose={() => setIsEditProfileModalOpen(false)} />
+      {isEditRestaurantProfileModalOpen && (
+        <EditRestaurantModal onClose={() => setIsEditRestaurantProfileModalOpen(false)} />
       )}
 
-      {isResetPasswordModalOpen && (
-        <ResetPasswordModal
-          onClose={() => setIsResetPasswordModalOpen(false)}
+      {isResetRestaurantPasswordModalOpen && (
+        <ResetRestaurantProfile
+          onClose={() => setIsResetRestaurantPasswordModalOpen(false)}
         />
       )}
     </>
   );
 };
 
-export default UserProfile;
+export default RestaurantProfile;
