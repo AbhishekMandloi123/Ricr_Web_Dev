@@ -1,6 +1,7 @@
 import React from "react";
 import { TbChartTreemap } from "react-icons/tb";
 import { ImProfile } from "react-icons/im";
+import { MdOutlineMenuBook } from "react-icons/md";
 import { TiShoppingCart } from "react-icons/ti";
 import { TbTransactionRupee } from "react-icons/tb";
 import { RiCustomerService2Fill } from "react-icons/ri";
@@ -18,6 +19,7 @@ const RestaurantSidebar = ({ active, setActive, isCollapsed, setIsCollapsed }) =
   const menuItems = [
     { key: "overview", title: "OverView", icon: <TbChartTreemap /> },
     { key: "profile", title: "Profile", icon: <ImProfile /> },
+    { key: "menu", title: "Menu", icon: <MdOutlineMenuBook /> },
     { key: "orders", title: "Orders", icon: <TiShoppingCart /> },
     {
       key: "transactions",
@@ -53,7 +55,7 @@ const RestaurantSidebar = ({ active, setActive, isCollapsed, setIsCollapsed }) =
             </button>{" "}
             {!isCollapsed && (
               <span className="overflow-hidden text-nowrap">
-                User Dashboard
+                Restaurant Dashboard
               </span>
             )}
           </div>
