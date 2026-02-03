@@ -1,39 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import AddItemsModal from "./modals/AddItemsModal";
-const RestaurantMenu = () => {
-  const [isAddItems, setIsAddItems] = useState(false);
 
+const RestaurantMenu = () => {
+  const [isAddItemModalOpen, setIsAddItemModalOpen] = React.useState(false);
   return (
     <>
-      <div className="flex flex-col md:flex-row gap-6 p-4">
-        
-        {/* Menu Items Section */}
-        <div className="flex-1 bg-(--color-primary)/10 rounded-xl shadow-md p-6 md:p-8">
-          <h2 className="text-xl font-semibold mb-4">🍽️ Menu Items</h2>
-          <p className="text-gray-600">
-            Manage your restaurant menu items here.
-          </p>
-        </div>
-
-        {/* Action Section */}
-        <div className="bg-(--color-primary)/10 rounded-xl shadow-md p-6 md:p-8 flex items-end">
+      <div className="bg-gray-50 rounded-lg p-6 h-full overflow-y-auto">
+        <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200 flex justify-between">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            Menu Management
+          </h2>
           <button
-            onClick={() => setIsAddItems(true)}
-            className="flex items-center gap-2 px-5 py-2 rounded-lg bg-(--color-secondary) text-white font-medium hover:scale-105 transition"
+            className="px-4 py-2 bg-(--color-secondary) text-white rounded-lg hover:bg-(--color-secondary-hover) transition font-semibold"
+            onClick={() => setIsAddItemModalOpen(true)}
           >
-            ➕ Add Item
+            Add Item
           </button>
         </div>
-
       </div>
 
-      {/* Modal */}
-      {isAddItems && (
-        <AddItemsModal onClose={() => setIsAddItems(false)} />
+      {isAddItemModalOpen && (
+        <AddItemsModal onClose={() => setIsAddItemModalOpen(false)} />
       )}
     </>
   );
 };
 
 export default RestaurantMenu;
-
