@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
-import EditRestaurantModal from "./modals/EditRestaurantModal";
+import EditRestaurantProfileModal from "./modals/EditRestaurantModal";
 import UserImage from "../../assets/userImage.jpg";
 import {
   FaCamera,

@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import RestaurantSidebar from "../../components/restaurantDashboard/RestaurantSidebar";
 import RestaurantProfile from "../../components/restaurantDashboard/RestaurantProfile";
 import RestaurantOrders from "../../components/restaurantDashboard/RestaurantOrders";
-import RestaurantTransaction from "../../components/restaurantDashboard/RestaurantTransaction";
+import RestaurantTransaction from "../../components/restaurantDashboard/RestaurantEarnings";
 import RestaurantMenu from "../../components/restaurantDashboard/RestaurantMenu";
 
 const RestaurantDashboard = () => {

@@ -4,7 +4,7 @@ export const genToken = (user, res) => {
   try {
     const payload = {
       id: user._id,
-      role: user.role || "admin",
+      role: user.role,
     };
     const token = jwt.sign(payload, process.env.JWT_SECRET, {
       expiresIn: "1d",

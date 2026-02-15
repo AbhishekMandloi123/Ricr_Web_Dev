@@ -48,10 +48,10 @@ const menuSchema = mongoose.Schema(
     availability: {
       type: String,
       required: true,
-      enum: ["available", "unavailable", "removed"], 
+      enum: ["available", "unavailable", "removed"],
       default: "available",
     },
-    image: {
+    images: {
       type: [
         {
           url: { type: String, required: true },
